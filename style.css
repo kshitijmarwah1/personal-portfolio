@@ -1,0 +1,101 @@
+body{
+    
+    background-color:black;
+    font-family: "M PLUS Rounded 1c", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #bea060;
+}
+
+.header{
+    color: #bea060;
+
+    display: flex; 
+    justify-content: space-around;
+    height: 50px;
+    font-size: 25px;
+}
+
+.home{
+    color: #bea060;
+    padding-top: 30px;
+    padding-left: 20%;
+    color: rgb(255, 255, 255);
+}
+
+.home1,.home2,.home3,.home4{
+    margin-left: 45px;
+}
+
+.button{
+    margin-left: 18px;
+}
+
+button:hover{
+    background-color:#b3a78c;
+}
+
+button:active{
+    background-color:#a49062;
+}
+
+.Hire{
+    height: 45px;
+    width: 120px;
+    margin-top: 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #bea060;
+    color:white;
+    border-radius: 5px;
+    border: none;
+
+}
+
+.social{
+    width: 100px;
+    height: 400px;
+    text-align: right;
+    margin-top: 110px;
+    size: 100%;
+    font-size : 200%;
+}
+
+a{
+    color:#bea060
+}
+
+a:hover{
+    color:wheat
+}
+
+.intro{
+
+    width: 500px;
+    text-align: left;
+    margin-left: 100px;
+    margin-top : 50px;
+    font-size: 35px;
+}
+
+.twitter{
+    margin-top: 100px;
+}
+.duction{    
+
+    display: flex;
+    justify-content:left;
+    width:100%;
+    margin-top:20px;
+    height: 10%;
+}
+.background-clip{
+
+    position: absolute;
+    right: 0;
+    bottom:0;
+    z-index: -1;
+}
+p{
+    font-size: 20px;
+}
