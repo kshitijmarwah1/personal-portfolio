@@ -1,66 +1,30 @@
-// console.log("hello");
-// const about = document.getElementById("About");
-// const social = document.getElementById("social")
-// const duct = document.getElementById("duction");
-// const maintext = document.getElementById("maintext");
-// const home = document.getElementById("Home");
-// const contain = document.getElementById("container");
-
-// about.addEventListener("click",function(){
-//     const rediv = document.createElement("div");
-
-//     rediv.classList="About intro";
-
-//     rediv.id = "maintext"
-
-//     const heading = document.createElement("h1");
-
-//     heading.innerText = "About Me";
-
-//     const para = document.createElement("p");
-
-//     para.innerText = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio asperiores impedit mollitia vero quae minima labore natus ad assumenda incidunt! Facere sequi nihil earum fuga ex aut praesentium ipsum odit?";
-
-//     para.classList = "jspara"
-
-//     duct.removeChild(social);
-
-//     rediv.appendChild(heading);
-
-//     rediv.appendChild(para);
-
-//     duct.replaceChild(rediv,maintext);
-//  });
-
-// home.addEventListener("click",function(){
-    
-//     const head = document.createElement("h1");
-
-//     head.innerText = "I'm student Kshitij Marwah";
-    
-//     const rediv = document.createElement("div");
-
-//     rediv.classList="intro";
-
-//     rediv.id = "maintext"
-
-//     rediv.appendChild(head)
-
-//     rediv.replaceChild(rediv,maintext)
-// });
 console.log("hello");
 
 const about = document.getElementById("About");
 const contact = document.getElementById("Contact");
-const social = document.getElementById("social");
-const duct = document.getElementById("duction");
-const maintext = document.getElementById("maintext");
 const home = document.getElementById("Home");
+const main_cont = document.getElementById("container");
+console.log(main_cont);
+home.addEventListener("click",function(){
+    fetch('./index.html')
+    .then(Response => Response.text())
+    .then(data => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(data, 'text/html');
+        const divContent = doc.querySelector('.duction').outerHTML;
+        console.log(divContent);
+        let duct = document.getElementById('duction');
+        duct.outerHTML=divContent;
+    })
 
+})
 about.addEventListener("click", function(){
+    let duct = document.getElementById("duction");
+    main_cont.removeChild(duct);
+
     const rediv = document.createElement("div");
-    rediv.classList = "About intro";
-    rediv.id = "maintext";
+    rediv.classList = "jsabout";
+    rediv.id = "duction";
 
     const heading = document.createElement("h1");
     heading.innerText = "About Me";
@@ -69,16 +33,19 @@ about.addEventListener("click", function(){
     para.innerText = "Lorem ipsum , dolor sit amet consectetur adipisicing elit. Distinctio asperiores impedit mollitia vero quae minima labore natus ad assumenda incidunt! Facere sequi nihil earum fuga ex aut praesentium ipsum odit?";
 
     para.classList = "jspara";
-    duct.removeChild(social);
     rediv.appendChild(heading);
     rediv.appendChild(para);
-    duct.replaceChild(rediv, maintext);
+    main_cont.appendChild(rediv);
 });
 
 contact.addEventListener("click", function(){
+    let duct = document.getElementById("duction");
+    main_cont.removeChild(duct);
+
+
     const rediv = document.createElement("div");
     rediv.classList = "Contact intro";
-    rediv.id = "maintext";
+    rediv.id = "duction";
     
     const heading = document.createElement("h1");
     heading.innerText = "Contact Me";
@@ -117,10 +84,7 @@ contact.addEventListener("click", function(){
     `;
     contactDetails.appendChild(email);
 
-    duct.removeChild(social);
     rediv.appendChild(heading);
     rediv.appendChild(contactDetails);
-    duct.replaceChild(rediv, maintext);
+    main_cont.appendChild(rediv);
 });
-
-
