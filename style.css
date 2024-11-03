@@ -7,103 +7,123 @@ body{
     color: #bea060;
 }
 
-.nav{
+.nav-bar{
     color: #bea060;
-
     display: flex; 
     justify-content: space-around;
-    height: 50px;
-    font-size: 25px;
+    height: 7vh;
 }
-
-.home{
+/*viewport height: vh
+  viewport width: vw
+*/
+.nav-items{
     color: #bea060;
-    padding-top: 30px;
-    padding-left: 20%;
+    margin-top: 3.5vh;
     color: rgb(255, 255, 255);
+    width:90vw;
 }
 
-.home1,.home2,.home3,.home4{
-    margin-left: 45px;
-    cursor: pointer;
+.nav-items a{
+    width:100%;
+    font-weight: bold;
+    margin-left: 10vw;
+    font-size: clamp(1rem, 3vw,3vh);
+    cursor:pointer;
+    color:#bea060;
 }
 
-.button{
-    margin-left: 18px;
-
+#Home{
+    margin-left: 15vw;
+}
+#Home,#About,#Contact,#Portfolio{
+    transition: color 0.15s;
+}
+#Home:hover,#About:hover,#Contact:hover,#Portfolio:hover{
+    color:wheat;
 }
 
-button{
-    cursor: pointer;
+#Hire{
+    background-color: #bea060;
+    color:white;
+    border-radius: 0.3vw;
+    border: none;
+    text-align: center;
+    margin-top:10px;
+    font-size: clamp(1rem, 3vw,2vh);
 }
-
-button:hover{
-    background-color:#b3a78c;
-}
-
-button:active{
-    background-color:#a49062;
-}
-
-.Hire{
+/*.Hire{
     height: 45px;
     width: 120px;
     margin-top: 20px;
     font-size: 20px;
     border-radius: 5px;
-    background-color: #bea060;
-    color:white;
-    border-radius: 5px;
-    border: none;
+    
+    
+    
 
+}*/
+
+
+
+.social ion-icon{
+    font-size:clamp(1rem, 4vw, 5vh);
+    margin-bottom: 30%;
+    color:#bea060;
+    transition: color 0.3s;
 }
-
+ion-icon:hover{
+    color: wheat;
+}
 .social{
-    width: 100px;
-    height: 400px;
-    text-align: right;
-    margin-top: 110px;
-    size: 100%;
-    font-size : 200%;
+    position: absolute;
+    width:fit-content;
+    top:15vh;
+    margin-left: 1.5%;
 }
 
-a{
-    color:#bea060
-}
 
-a:hover{
-    color:wheat
-}
+
 
 .intro{
-    width: 500px;
-    text-align: left;
-    margin-left: 100px;
-    margin-top : 50px;
-    font-size: 35px;
+    width: 90vw;
+    height:50vh;
+}
+.intro h1{
+    width: 100vw;
+    height: 25vh;
+    margin-left: 3vw;
+    margin-top : 3.5vh;
+    font-size: clamp(1rem, 5vw, 8vh);
 }
 
-.twitter{
-    margin-top: 100px;
+.intro p{
+    width: 60vw;
+    margin-top: 4vh;
+    margin-left: 3vw;
+    font-size: clamp(1rem, 1vw, 2vh);
 }
-.duction{    
+
+.main-container{    
 
     display: flex;
     justify-content:left;
-    width:100%;
-    margin-top:20px;
-    height: 10%;
+    position: relative;
+    width:90vw;
+    margin-top:1.5vh;
+    left:3vw;
+
 }
 .background-clip{
 
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom:0;
+    width:100vw;
+    height:100vh;
+    object-fit: cover;
     z-index: -1;
 }
-p{
-    font-size: 20px;
-}
+
 
 /* This is for java script*/
 .About{
@@ -115,43 +135,47 @@ p{
 }
 
 .heading-contact{
-    padding-top: 40px;
+    width:100vw;
     text-align: center;
-    font-size: 60px;
     text-decoration: underline;
-    width: 500px;
-    margin-left: 53%;
+    left:50vw;
+    height:20vh;
+    font-size: clamp(1rem, 12vw,12vh);
 }
 .contact-details {
     display: flex;
-    justify-content: space-b;
+    justify-content: space-evenly;
     margin-top: 20px;
-    width: 900px;
+    width: 100vw;
+    height:25vh;
     padding-left: 100px;
 }
 
 .contact-item {
     text-align: center;
     background-color: #eee1e1;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 10px;
-    width: 3000px; 
+    border-radius: 1vw;
+    width: 25vw;
 }
 
 .contact-item ion-icon {
-    font-size: 50px;
+    width:7vw;
+    height:7vh;
     color: #bea060;
 }
 
 .contact-item h3 {
+    position: relative;
     margin-top: 10px;
     color: #000;
+    font-size: clamp(1rem, 3vw,3vh);
+    font-weight: bold;
 }
 
 .contact-item p {
-    margin: 5px 0;
+    position: relative;
     color: #333;
+    font-size: clamp(1rem, 1.75vw,1.75vh);
 }
 
 .jsabout h1{
@@ -170,16 +194,43 @@ p{
     margin-left: 30%;
 }
 
-@media (min-aspect-ratio:16/9){
-    .background-clip{
-        width: 100%;
-        height: auto;
+
+/* Styling for phones */
+@media only screen and (max-width:600px){
+    .intro h1{
+        height:fit-content;
+        font-size: clamp(1rem, 10vw, 16vh);
+    }
+    .nav-items a{
+        margin-left: 5vw;
+    }
+    #Hire{
+        position: relative;
+        top: 50vh;
+        left: 70vw;
     }
 }
-
-@media (max-aspect-ratio:16/9){
-    .background-clip{
-        width: auto;
-        height: 100%;
+/* Styling for tablets */
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    .intro h1{
+        height:fit-content;
+        font-size: clamp(1rem, 10vw, 16vh);
+    }
+    
+    .nav-items a{
+        margin-left: 5vw;
+        
+    }
+    #Hire{
+        position: relative;
+        
+    }
+}
+@keyframes enlargen{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.5);
     }
 }
