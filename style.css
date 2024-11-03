@@ -12,6 +12,7 @@ body{
     display: flex; 
     justify-content: space-around;
     height: 7vh;
+    
 }
 /*viewport height: vh
   viewport width: vw
@@ -26,14 +27,14 @@ body{
 .nav-items a{
     width:100%;
     font-weight: bold;
-    margin-left: 10vw;
-    font-size: clamp(1rem, 3vw,3vh);
+    margin-left: 7vw;
+    font-size: clamp(1rem, 4.5vw,4.5vh);
     cursor:pointer;
     color:#bea060;
 }
 
 #Home{
-    margin-left: 15vw;
+    margin-left: 25vw;
 }
 #Home,#About,#Contact,#Portfolio{
     transition: color 0.15s;
@@ -43,13 +44,20 @@ body{
 }
 
 #Hire{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3vw;
     background-color: #bea060;
     color:white;
     border-radius: 0.3vw;
     border: none;
     text-align: center;
-    margin-top:10px;
-    font-size: clamp(1rem, 3vw,2vh);
+    margin-top:17px;
+    height: 7vh;
+    width: 9vw;
+    font-size: clamp(1rem, 3.5vw,3.5vh);
+    cursor: pointer;
 }
 /*.Hire{
     height: 45px;
@@ -67,7 +75,7 @@ body{
 
 .social ion-icon{
     font-size:clamp(1rem, 4vw, 5vh);
-    margin-bottom: 30%;
+    margin-bottom: 80%;
     color:#bea060;
     transition: color 0.3s;
 }
@@ -77,8 +85,8 @@ ion-icon:hover{
 .social{
     position: absolute;
     width:fit-content;
-    top:15vh;
-    margin-left: 1.5%;
+    top:25vh;
+    margin-left: 3%;
 }
 
 
@@ -89,18 +97,18 @@ ion-icon:hover{
     height:50vh;
 }
 .intro h1{
-    width: 100vw;
+    width: 50vw;
     height: 25vh;
-    margin-left: 3vw;
-    margin-top : 3.5vh;
-    font-size: clamp(1rem, 5vw, 8vh);
+    margin-left: 8vw;
+    margin-top : 10vh;
+    font-size: clamp(1rem, 8vw, 10vh);
 }
 
 .intro p{
-    width: 60vw;
-    margin-top: 4vh;
-    margin-left: 3vw;
-    font-size: clamp(1rem, 1vw, 2vh);
+    width: 40vw;
+    margin-top: 5vh;
+    margin-left: 8vw;
+    font-size: clamp(1rem, 3vw, 3vh);
 }
 
 .main-container{    
@@ -108,7 +116,7 @@ ion-icon:hover{
     display: flex;
     justify-content:left;
     position: relative;
-    width:90vw;
+    width:50vw;
     margin-top:1.5vh;
     left:3vw;
 
@@ -146,7 +154,7 @@ ion-icon:hover{
     display: flex;
     justify-content: space-evenly;
     margin-top: 20px;
-    width: 100vw;
+    width: 85vw;
     height:25vh;
     padding-left: 100px;
 }
@@ -156,6 +164,7 @@ ion-icon:hover{
     background-color: #eee1e1;
     border-radius: 1vw;
     width: 25vw;
+    height: 30vh;
 }
 
 .contact-item ion-icon {
@@ -193,7 +202,9 @@ ion-icon:hover{
     width: 400px;
     margin-left: 30%;
 }
-
+img{
+    margin-top:6.5vh;
+}
 
 /* Styling for phones */
 @media only screen and (max-width:600px){
