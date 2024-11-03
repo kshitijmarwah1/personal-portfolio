@@ -3,28 +3,36 @@ console.log("hello");
 const about = document.getElementById("About");
 const contact = document.getElementById("Contact");
 const home = document.getElementById("Home");
-const main_cont = document.getElementById("container");
+let main_cont = document.getElementById("container");
 console.log(main_cont);
+// Reloads Home
 home.addEventListener("click",function(){
     fetch('./index.html')
     .then(Response => Response.text())
     .then(data => {
+        // Condition to ensure no duplicate divs are created
+        if (!document.getElementById("social")){
         const parser = new DOMParser();
-        const doc = parser.parseFromString(data, 'text/html');
-        const divContent = doc.querySelector('.duction').outerHTML;
-        console.log(divContent);
-        let duct = document.getElementById('duction');
-        duct.outerHTML=divContent;
+        const parsed = parser.parseFromString(data, 'text/html');
+        const container = parsed.querySelector('.main-container');
+        let social = parsed.querySelector('.social');
+        let duct = document.getElementById('main-container');
+        duct.outerHTML=container.outerHTML+social.outerHTML;
+        }
     })
 
 })
+// About Page, dynamic HTML 
 about.addEventListener("click", function(){
-    let duct = document.getElementById("duction");
+    let duct = document.getElementById("main-container");
     main_cont.removeChild(duct);
+    if (document.getElementById("social")){
+        main_cont.removeChild(document.getElementById("social"));
+    }
 
     const rediv = document.createElement("div");
     rediv.classList = "jsabout";
-    rediv.id = "duction";
+    rediv.id = "main-container";
 
     const heading = document.createElement("h1");
     heading.innerText = "About Me";
@@ -37,15 +45,17 @@ about.addEventListener("click", function(){
     rediv.appendChild(para);
     main_cont.appendChild(rediv);
 });
-
+// Contact Page, Dynamic HTML
 contact.addEventListener("click", function(){
-    let duct = document.getElementById("duction");
+    let duct = document.getElementById("main-container");
     main_cont.removeChild(duct);
-
+    if (document.getElementById("social")){
+        main_cont.removeChild(document.getElementById("social"));
+    }
 
     const rediv = document.createElement("div");
-    rediv.classList = "Contact intro";
-    rediv.id = "duction";
+    rediv.classList = "Contact";
+    rediv.id = "main-container";
     
     const heading = document.createElement("h1");
     heading.innerText = "Contact Me";
@@ -62,7 +72,7 @@ contact.addEventListener("click", function(){
         <p>+91 8802888123</p>
         <p>Monday - Friday from 7am - 5pm</p>
     `;
-    contactDetails.appendChild(phone);
+    
 
     const location = document.createElement("div");
     location.classList = "contact-item";
@@ -72,7 +82,7 @@ contact.addEventListener("click", function(){
         <p>Hari Nagar Mig Flats</p>
         <p> F1 - 12/D </p>
     `;
-    contactDetails.appendChild(location);
+    
 
     const email = document.createElement("div");
     email.classList = "contact-item";
@@ -82,8 +92,10 @@ contact.addEventListener("click", function(){
         <p>kmarwah@gmail.com</p>
         <p>Contact me anytime!</p>
     `;
-    contactDetails.appendChild(email);
 
+    contactDetails.appendChild(phone);
+    contactDetails.appendChild(location);
+    contactDetails.appendChild(email);
     rediv.appendChild(heading);
     rediv.appendChild(contactDetails);
     main_cont.appendChild(rediv);
