@@ -1,9 +1,10 @@
 body{
       
     background-color:black;
-    font-family: "M PLUS Rounded 1c", serif;
-    font-weight: 400;
-    font-style: normal;
+    font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+
+  font-style: normal;
     color: #bea060;
 }
 
@@ -59,18 +60,6 @@ body{
     font-size: clamp(1rem, 3.5vw,3.5vh);
     cursor: pointer;
 }
-/*.Hire{
-    height: 45px;
-    width: 120px;
-    margin-top: 20px;
-    font-size: 20px;
-    border-radius: 5px;
-    
-    
-    
-
-}*/
-
 
 
 .social ion-icon{
