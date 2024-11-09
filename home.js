@@ -43,7 +43,7 @@ about.addEventListener("click", function(){
     image.alt = "About Me Image";
     image.style.position = "absolute";
     image.style.left = "100px"; // Adjust as needed
-    image.style.top = "65%"; // Adjust as needed
+    image.style.top = "75%"; // Adjust as needed
     image.style.transform = "translateY(-50%)"; // Center vertically
     image.style.width = "350px"; // Adjust as needed
     image.style.height = "auto"; // Maintain aspect ratio
@@ -123,4 +123,93 @@ contact.addEventListener("click", function(){
     rediv.appendChild(heading);
     rediv.appendChild(contactDetails);
     main_cont.appendChild(rediv);
+});
+
+contact.addEventListener("click", function(){
+// Data for the cards
+const cardData = [
+    { title: "Python", date: "2021-2022", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    { title: "C", date: "2022-2023", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", role: "Web Designer" },
+    { title: "C++", date: "2022-2023", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", role: "Web Developer" },
+    { title: "Graphic Designer", date: "2023-2024", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", role: "Graphic Designer" },
+    { title: "Web Designing", date: "2023-2024", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", role: "Marketing" },
+  ];
+  
+  // Function to create the layout
+  function createLayout() {
+    // Create a container for the cards
+    const cardContainer = document.createElement("div");
+    cardContainer.style.display = "flex";
+    cardContainer.style.flexWrap = "wrap";
+    cardContainer.style.gap = "20px";
+    cardContainer.style.justifyContent = "center";
+    cardContainer.style.maxWidth = "800px";
+    cardContainer.style.margin = "20px auto";
+  
+    // Loop through the card data to create each card
+    cardData.forEach(data => {
+      // Create the card element
+      const card = document.createElement("div");
+      card.style.backgroundColor = "#fff";
+      card.style.padding = "20px";
+      card.style.borderRadius = "8px";
+      card.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
+      card.style.width = "220px";
+      card.style.textAlign = "center";
+  
+      // Title
+      const title = document.createElement("h3");
+      title.innerText = data.title;
+      title.style.color = "#333";
+      title.style.fontSize = "1.2em";
+      title.style.marginBottom = "10px";
+  
+      // Date
+      const date = document.createElement("div");
+      date.innerText = data.date;
+      date.style.color = "#e74c3c";
+      date.style.fontWeight = "bold";
+      date.style.marginBottom = "10px";
+  
+      // Description
+      const description = document.createElement("p");
+      description.innerText = data.description;
+      description.style.color = "#666";
+      description.style.fontSize = "0.9em";
+      description.style.marginBottom = "20px";
+  
+      // Progress bar container
+      const progressBarContainer = document.createElement("div");
+      progressBarContainer.style.position = "relative";
+      progressBarContainer.style.height = "8px";
+      progressBarContainer.style.backgroundColor = "#eee";
+      progressBarContainer.style.borderRadius = "4px";
+      progressBarContainer.style.overflow = "hidden";
+  
+      // Progress bar
+      const progressBar = document.createElement("div");
+      progressBar.style.height = "100%";
+      progressBar.style.backgroundColor = "#e74c3c";
+      progressBar.style.width = "80%"; // Adjust this width as needed
+  
+      // Append the progress bar to its container
+      progressBarContainer.appendChild(progressBar);
+  
+      // Append all elements to the card
+      card.appendChild(title);
+      card.appendChild(date);
+      card.appendChild(description);
+      card.appendChild(progressBarContainer);
+      
+  
+      // Append the card to the container
+      cardContainer.appendChild(card);
+    });
+  
+    // Append the card container to the body
+    document.body.appendChild(cardContainer);
+  }
+  
+  // Call the function to create the layout
+  createLayout();
 });
