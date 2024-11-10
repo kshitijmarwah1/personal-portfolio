@@ -43,11 +43,11 @@ about.addEventListener("click", function(){
     image.src = "photo-about-me-removebg-preview.png"; // Replace with the actual path to your image
     image.alt = "About Me Image";
     image.style.position = "absolute";
-    image.style.left = "100px"; // Adjust as needed
-    image.style.top = "65%"; // Adjust as needed
+    image.style.left = "130px"; // Adjust as needed
+    image.style.top = "75%"; // Adjust as needed
     image.style.transform = "translateY(-50%)"; // Center vertically
-    image.style.width = "350px"; // Adjust as needed
-    image.style.height = "auto"; // Maintain aspect ratio
+    image.style.width = "250px"; // Adjust as needed
+    image.style.height = "350px"; // Maintain aspect ratio
 
 
     const heading1 = document.createElement("h2");
@@ -56,8 +56,8 @@ about.addEventListener("click", function(){
 
     const para = document.createElement("p");
     const para1 = document.createElement("p");
-    para.innerText = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio asperiores impedit mollitia vero quae minima labore natus ad assumenda incidunt! Facere sequi nihil earum fuga ex aut praesentium ipsum odit?";
-    para1.innerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio asperiores impedit mollitia vero quae minima labore natus ad assumenda incidunt! Facere sequi nihil earum fuga ex aut praesentium ipsum odit?";
+    para.innerText = "Hello! I'm Kshitij Marwah, a driven and passionate BCA student at KR Mangalam University, currently diving deep into the world of computer science and web development. From a young age, I ve been fascinated by technology and the impact it has on our daily lives. My journey into tech has been fueled by a strong desire to understand how things work and to create innovative solutions that can make a difference";
+    para1.innerText = "With a solid foundation in programming and web development, I’m skilled in HTML, CSS, JavaScript, and other key technologies. My interests extend to UI/UX design, where I enjoy creating user-friendly, visually appealing interfaces that enhance the user experience. I believe in combining creativity with technical skills to deliver projects that are both functional and aesthetically pleasing.";
 
     para.classList = "jspara";
     para1.classList = "jspara";
@@ -65,8 +65,8 @@ about.addEventListener("click", function(){
     rediv.appendChild(heading);
     rediv.appendChild(heading1);
     rediv.appendChild(image); // Add the image to the div
-    rediv.appendChild(para1);
     rediv.appendChild(para);
+    rediv.appendChild(para1);
     main_cont.appendChild(rediv);
 });
 
@@ -139,8 +139,8 @@ portfolio.addEventListener("click", function(){
     const card = document.createElement("div");
     card.className = "card";
     card.innerHTML = `
-        <h2>Engineer</h2>
-        <h3>Python</h3>
+        <h2>Python</h2>
+        <h3>2020 - 2021</h3>
         <ul>
             <li> Experienced in AI Engineering</li>
             <li> Experienced in Django</li>
@@ -150,8 +150,8 @@ portfolio.addEventListener("click", function(){
     const card2 = document.createElement("div");
     card2.className = "card";
     card2.innerHTML = `
-        <h2>Designer</h2>
-        <h3>Unity</h3>
+        <h2>Unity</h2>
+        <h3>2022 - 2023</h3>
         <ul>
             <li> Experienced in prototype development
             <li> Experienced in designing spaces
@@ -167,8 +167,8 @@ portfolio.addEventListener("click", function(){
     const card3 = document.createElement("div");
     card3.className = "card";
     card3.innerHTML = `
-        <h2>Professional</h2>
-        <h3>Experience</h3>
+        <h2>Adobe</h2>
+        <h3>2022 - 2023</h3>
         <ul id="list">
             <li> Experienced in Photoshop</li>
             <li> Experienced in Premiere Pro</li>
@@ -179,22 +179,22 @@ portfolio.addEventListener("click", function(){
     card4.className = "card";
     card4.innerHTML = `
         <h2>C</h2>
-        <h3>2021-2022</h3>
+        <h3>2023-2024</h3>
         <ul>
-            <li> Experienced in OOPS
-            <li> Experienced in NASA
-            <li> Experienced in Moon Landing
+            <li> Experienced in Functional Programming
+            <li> Experienced in DSA
+            <li> Experienced in arrays
         </ul>
                             `;
     const card5= document.createElement("div");
     card5.className = "card";
     card5.innerHTML = `
         <h2>C++</h2>
-        <h3>2021-2022</h3>
+        <h3>2023-2024</h3>
         <ul>
             <li> Experienced in OOPS
-            <li> Experienced in Quantum Mechanics
-            <li> Experienced in Moon Landing
+            <li> Experienced in DSA
+            <li> Experienced in QT
         </ul>
                             `;
     const card6= document.createElement("div");

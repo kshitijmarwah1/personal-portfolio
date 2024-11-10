@@ -37,11 +37,11 @@ body{
 #Home{
     margin-left: 25vw;
 }
-#Home,#About,#Contact,#Portfolio{
+#Home,#About,#Contact,#Portfolio,#Hire{
     transition: color 0.15s;
 }
-#Home:hover,#About:hover,#Contact:hover,#Portfolio:hover{
-    color:rgb(255, 255, 255);
+#Home:hover,#About:hover,#Contact:hover,#Portfolio:hover,#Hire:hover{
+    color:rgb(185, 138, 138);
 }
 
 #Hire{
@@ -156,6 +156,7 @@ ion-icon:hover{
     border-radius: 1vw;
     width: 25vw;
     height: 30vh;
+    transition: transform 0.15s;
 }
 
 .contact-item ion-icon {
@@ -223,7 +224,7 @@ ion-icon:hover{
     color: #003366;
     font-weight: bold;
     border-radius: 1vw;
-    width:20vw;
+    width:25vw;
     height: fit-content;
     transition: transform 0.15s;
 }
@@ -254,7 +255,7 @@ ion-icon:hover{
     width:75%;
     left:9%;
     height: 1.7vh;
-    border:3px solid;
+    border:0.14vw solid;
     border-radius: 1vw;
     border-color: black;
     background-color: #D3D3D3;
@@ -293,7 +294,7 @@ img{
     margin-top:6.5vh;
     
 }
-.card:hover{
+.card:hover,.contact-item:hover{
     transform: scale(1.05);
 }
 /* Styling for phones */
