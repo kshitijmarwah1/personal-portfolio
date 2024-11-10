@@ -179,12 +179,16 @@ ion-icon:hover{
 }
 
 .jsabout h1{
-    padding-top: 40px;
-    text-align: center;
-    font-size: 60px;
+    position: relative;
+    left:40%;
+    width:fit-content;
+    font-size: clamp(1rem, 10vw, 10vh);
     text-decoration: underline;
-    width: 500px;
-    margin-left: 32%;
+    
+}
+.jsabout h2 {
+    position: relative;
+
 }
 
 .jsabout h4{
@@ -201,10 +205,97 @@ ion-icon:hover{
     width: 400px;
     margin-left: 26%;
 }
-img{
-    margin-top:6.5vh;
+#heading3{
+    position: relative;
+    width:fit-content;
+    font-size: clamp(1rem, 8vw,8vh);
+    left:45%;
 }
+.row{
+    position: relative;
+    display: flex;
+    justify-content:space-evenly;
+    width:100%;
+    margin-top: 2%;
+}
+.card{
+    background: radial-gradient(circle, #84fab0, #8fd3f4);
+    color: #003366;
+    font-weight: bold;
+    border-radius: 1vw;
+    width:20vw;
+    height: fit-content;
+    transition: transform 0.15s;
+}
+.card h2{
+    
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: clamp(1rem, 3vw,3vh);
+}
+.card h3{
+    text-decoration: overline;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: clamp(1rem, 2vw, 2vh);
+    color: #002244;
+    font-weight: semi-bold;
+}
+.card ul{
+    color: #000000;
+    font-family: 'Raleway', sans-serif;  
+    font-weight: 550;  
+    margin-left: 1.5%;
+    font-size: clamp(1rem, 2vw, 2vh);
+}
+.progress-container{
+    position: relative;
+    margin-bottom: 20px;
+    width:75%;
+    left:9%;
+    height: 1.7vh;
+    border:3px solid;
+    border-radius: 1vw;
+    border-color: black;
+    background-color: #D3D3D3;
 
+}
+.progress-bar{
+    
+    height:1.7vh;
+    border-radius: 1vw; 
+    background-color: #FF8C00;
+}
+#progress-bar1 .progress-bar{
+    width:75%;
+}
+#progress-bar2 .progress-bar{
+    width:80%;
+    
+}
+#progress-bar3 .progress-bar{
+    width:50%;
+
+}
+#progress-bar4 .progress-bar{
+    width:60%;
+    
+
+}
+#progress-bar5 .progress-bar{
+    width:90%;
+    
+
+}
+img{
+    width:40vw;
+    height: auto;
+    margin-top:6.5vh;
+    
+}
+.card:hover{
+    transform: scale(1.05);
+}
 /* Styling for phones */
 @media only screen and (max-width:600px){
     .intro h1{
