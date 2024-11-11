@@ -39,6 +39,8 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
 
     if (isValid) {
         alert('Registration successful!');
+        // Reset the form
+        document.getElementById("myForm").reset();
     }
 });
 
