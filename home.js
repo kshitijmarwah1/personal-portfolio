@@ -40,14 +40,14 @@ about.addEventListener("click", function(){
 
     // Create the image element
     const image = document.createElement("img");
-    image.src = "photo-about-me-removebg-preview.png"; // Replace with the actual path to your image
+    image.src = "about-removebg-preview.png"; // Replace with the actual path to your image
     image.alt = "About Me Image";
     image.style.position = "absolute";
     image.style.left = "130px"; // Adjust as needed
-    image.style.top = "75%"; // Adjust as needed
+    image.style.top = "50%"; // Adjust as needed
     image.style.transform = "translateY(-50%)"; // Center vertically
-    image.style.width = "250px"; // Adjust as needed
-    image.style.height = "350px"; // Maintain aspect ratio
+    image.style.width = "300px"; // Adjust as needed
+    image.style.height = "400px"; // Maintain aspect ratio
 
 
     const heading1 = document.createElement("h2");
@@ -57,7 +57,7 @@ about.addEventListener("click", function(){
     const para = document.createElement("p");
     const para1 = document.createElement("p");
     para.innerText = "Hello! I'm Kshitij Marwah, a driven and passionate BCA student at KR Mangalam University, currently diving deep into the world of computer science and web development. From a young age, I ve been fascinated by technology and the impact it has on our daily lives. My journey into tech has been fueled by a strong desire to understand how things work and to create innovative solutions that can make a difference";
-    para1.innerText = "With a solid foundation in programming and web development, I’m skilled in HTML, CSS, JavaScript, and other key technologies. My interests extend to UI/UX design, where I enjoy creating user-friendly, visually appealing interfaces that enhance the user experience. I believe in combining creativity with technical skills to deliver projects that are both functional and aesthetically pleasing.";
+    para1.innerText = "With a solid foundation in programming and web development, I’m skilled in HTML, CSS, JavaScript, and other key technologies. My interests extend to UI/UX design";
 
     para.classList = "jspara";
     para1.classList = "jspara";
